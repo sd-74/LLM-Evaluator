@@ -4,9 +4,10 @@ function DatasetForm() {
   const [datasetName, setDatasetName] = useState('');
   const [llmName, setLlmName] = useState('');
   const [prompt, setPrompt] = useState('');
+  const [score, setScore] = useState(null);
+  
 
   const handleSubmit = async (e) => {
-    console.log("submit")
     e.preventDefault();
     try {
       const response = await fetch('http://localhost:4000/submit', {
@@ -22,6 +23,7 @@ function DatasetForm() {
       }
       const data = await response.json();
       console.log(data);
+      setScore(data.score);
     } catch (error) {
       console.error('Error:', error);
     }
@@ -59,6 +61,11 @@ function DatasetForm() {
         />
       </div>
       <button type="submit">Submit</button>
+      {score !== null && (
+        <div>
+          <h3>Evaluation Score: {score}</h3>
+        </div>
+      )}
     </form>
   );
 }
