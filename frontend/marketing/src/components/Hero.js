@@ -7,7 +7,7 @@ function Hero() {
     <div className='hero-container'>
         <div className='text-container'>
             <div className='text-center'>
-                In-house LLMs 
+                In-House LLMs 
                 <div className='text-blue'>Perfection Made Easy.</div>
             </div>
             <div className='text-sub'>
