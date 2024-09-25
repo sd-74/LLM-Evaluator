@@ -1,15 +1,20 @@
 import React from "react";
 import "../styles/Navbar.css";
+import logo from "../assets/png/logo-no-background.png";
 
 const Navbar = () => {
   return (
     <nav className="navbar">
+      <img src={logo} alt="Logo" className="logo" />
       <div className="navbar-left">
-        <img src="your-image.png" alt="Logo" className="logo" />
+        <button className="navbar-btn-hover">Product</button>
+        <button className="navbar-btn-hover">Features</button>
+        <button className="navbar-btn-hover">Pricing</button>
+        <button className="navbar-btn-hover">Contact</button>
       </div>
       <div className="navbar-right">
-        <button className="navbar-btn">Button 1</button>
-        <button className="navbar-btn">Button 2</button>
+        <button className="navbar-btn">Login</button>
+        <button className="navbar-btn">Get Started</button>
       </div>
     </nav>
   );
