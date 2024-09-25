@@ -16,9 +16,9 @@ function Hero() {
             </div>
 
         </div>
-        <div className='info-link-container'>
-                Check out what we're building
-            </div>
+        <button className='info-link-container'>
+                See what's building
+            </button>
     </div>
 );
 }

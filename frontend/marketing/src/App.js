@@ -1,11 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-import Hero from './components/Hero';
-
+import logo from "./logo.svg";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Slideshow from "./components/Slideshow";
+import Hero from "./components/Hero";
 function App() {
   return (
-    <div className="Hero">
+    <div className="App">
+      <Navbar />
+      
       <Hero />
+      <Slideshow />
     </div>
   );
 }
